@@ -34,9 +34,9 @@ mail = Mail(app)
 
 
 if(local_server):
-    app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
+    app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///another_escape.db"
 else:
-    app.config['SQLALCHEMY_DATABASE_URI'] = params['prod_uri']
+    app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///another_escape.db"
 
 
 db = SQLAlchemy(app)
@@ -175,5 +175,5 @@ def uploader():
             f.save(os.path.join(app.config['UPLOAD_FOLDER']))
             return "Uploaded successfully!"
 
-
-app.run(debug = True) 
+if __name__ == "__main__":
+    app.run(debug = True) 

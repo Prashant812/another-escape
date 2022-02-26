@@ -2,8 +2,8 @@
     "params":
     {
         "local_server":"True",
-        "local_uri": "mysql://root:@localhost/another escape",
-        "prod_uri": "mysql://root:@localhost/another escape",
+        "local_uri": "mysql://root:@server/another_escape.sql",
+        "prod_uri": "mysql://root:@server/another_escape.sql",
         "fb_url" : "https://facebook.com/anotherescape",
         "tw_url" : "https://facebook.com/anotherescape",
         "inst_url" : "https://facebook.com/anotherescape",
